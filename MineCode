@@ -1,0 +1,33 @@
+local Material = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kinlei/MaterialLua/master/Module.lua"))()
+
+local UI = Material.Load({
+     Title = "Massacre Miners",
+     Style = 1,
+     SizeX = 200,
+     SizeY = 160,
+     Theme = "Dark",
+      ColorOverrides = {
+        MainFrame = Color3.fromRGB(2, 2, 2)
+      }
+
+    })
+local Page = UI.New({
+    Title = "Faze Obama"
+})
+
+ Page.Button({
+        Text = "tp base",
+        Callback = function()
+game:GetService("ReplicatedStorage").Remotes.BackToTop:InvokeServer()
+end
+})
+
+Page.Button({
+        Text = "Empty inv",
+        Callback = function()
+local ohBoolean1 = true
+
+game:GetService("ReplicatedStorage").Remotes.MoveToStorage_OreBag:FireServer(ohBoolean1)
+end
+})
+    
